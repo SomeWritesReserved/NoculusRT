@@ -1,0 +1,25 @@
+ovr_Initialize()
+ovr_Create(ovrSession, ovrGraphicsLuid)
+ovr_GetHmdDesc(ovrHmdDesc)
+foreach eye
+	ovr_GetFovTextureSize(ovrSizei)
+	ovr_CreateTextureSwapChainDX(ovrTextureSwapChain)
+	ovr_GetTextureSwapChainLength(textureCount)
+		ovr_GetTextureSwapChainBufferDX()
+ovr_CreateMirrorTextureWithOptionsDX(ovrMirrorTexture)
+ovr_SetTrackingOriginType()
+
+while mainloop
+	ovr_GetSessionStatus(ovrSessionStatus)
+	foreach eye
+		ovr_GetRenderDesc(ovrEyeRenderDesc)
+	ovr_GetEyePoses(sensorSampleTime)
+	foreach eye
+		ovrMatrix4f_Projection(ovrMatrix4f)
+		ovrTimewarpProjectionDesc_FromProjection(posTimewarpProjectionDesc)
+		ovr_CommitTextureSwapChain
+	foreach eye
+		set ovrLayerEyeFovDepth
+	ovr_SubmitFrame
+	ovr_GetMirrorTextureBufferDX
+	

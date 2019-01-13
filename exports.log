@@ -1,0 +1,152 @@
+Microsoft (R) COFF/PE Dumper Version 14.15.26730.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file LibOVRRT64_1.dll
+
+File Type: DLL
+
+  Section contains the following exports for LibOVRRT64_1.dll
+
+    00000000 characteristics
+           0 time date stamp
+        0.00 version
+           0 ordinal base
+         122 number of functions
+         121 number of names
+
+    ordinal hint RVA      name
+
+          1    0 0027FF90 ?allocatorAutoCreate@OVR@@3UAllocatorAutoCreate@1@A
+          2    1 000DA890 ConfiguratorOnChannelLevelChangeC
+          3    2 000DA900 ConfiguratorRegisterC
+          4    3 000DA9E0 ConfiguratorUnregisterC
+          5    4 000DA830 OutputWorkerOutputFunctionC
+          6    5 00066A70 ovrMatrix4f_OrthoSubProjection
+          7    6 00066960 ovrMatrix4f_Projection
+          8    7 00066EE0 ovrPosef_FlipHandedness
+          9    8 00066A20 ovrTimewarpProjectionDesc_FromProjection
+         10    9 00049DD0 ovr_BeginFrame
+         11    A 00066AF0 ovr_CalcEyePoses
+         12    B 000495E0 ovr_ClearShouldRecenterFlag
+         13    C 0004B770 ovr_CommitTextureSwapChain
+         14    D 0004ED30 ovr_ConfigureTracking
+         15    E 00048E40 ovr_Create
+         16    F 0004C890 ovr_CreateMirrorTextureDX
+         17   10 0004B0E0 ovr_CreateMirrorTextureGL
+         18   11 0004C8A0 ovr_CreateMirrorTextureWithOptionsDX
+         19   12 0004B1D0 ovr_CreateMirrorTextureWithOptionsGL
+         20   13 0004CEC0 ovr_CreateMirrorTextureWithOptionsVk
+         21   14 0004C880 ovr_CreateTextureSwapChainDX
+         22   15 0004AFF0 ovr_CreateTextureSwapChainGL
+         23   16 0004CCE0 ovr_CreateTextureSwapChainVk
+         24   17 00048F20 ovr_Destroy
+         25   18 0004B920 ovr_DestroyMirrorTexture
+         26   19 0004B850 ovr_DestroyTextureSwapChain
+         27   1A 000668E0 ovr_Detect
+         28   1B 000491B0 ovr_EnableExtension
+         29   1C 00049EB0 ovr_EndFrame
+         30   1D 000673B0 ovr_GenHapticsFromAudioData
+         31   1E 0004C950 ovr_GetAudioDeviceInGuid
+         32   1F 0004C940 ovr_GetAudioDeviceInGuidStr
+         33   20 0004C910 ovr_GetAudioDeviceInWaveId
+         34   21 0004C930 ovr_GetAudioDeviceOutGuid
+         35   22 0004C920 ovr_GetAudioDeviceOutGuidStr
+         36   23 0004C900 ovr_GetAudioDeviceOutWaveId
+         37   24 0004A520 ovr_GetBool
+         38   25 0004C240 ovr_GetBoundaryDimensions
+         39   26 0004C150 ovr_GetBoundaryGeometry
+         40   27 0004C330 ovr_GetBoundaryVisible
+         41   28 00049A20 ovr_GetConnectedControllerTypes
+         42   29 0004BCD0 ovr_GetControllerVibrationState
+         43   2A 0004CA30 ovr_GetDeviceExtensionsVk
+         44   2B 0004D220 ovr_GetDevicePoses
+         45   2C 0004ED00 ovr_GetEnabledCaps
+         46   2D 0004C6A0 ovr_GetExternalCameras
+         47   2E 00066DC0 ovr_GetEyePoses
+         48   2F 0004A8E0 ovr_GetFloat
+         49   30 0004AAC0 ovr_GetFloatArray
+         50   31 0002B8A0 ovr_GetFovStencil
+         51   32 00049AF0 ovr_GetFovTextureSize
+         52   33 00048B30 ovr_GetHmdDesc
+         53   34 0004D590 ovr_GetHybridInputFocus
+         54   35 00049930 ovr_GetInputState
+         55   36 0004C960 ovr_GetInstanceExtensionsVk
+         56   37 0004A700 ovr_GetInt
+         57   38 00048A80 ovr_GetLastErrorInfo
+         58   39 0004C8E0 ovr_GetMirrorTextureBufferDX
+         59   3A 0004B3B0 ovr_GetMirrorTextureBufferGL
+         60   3B 0004CFB0 ovr_GetMirrorTextureBufferVk
+         61   3C 0004C4F0 ovr_GetPerfStats
+         62   3D 0004A440 ovr_GetPredictedDisplayTime
+         63   3E 0004A1F0 ovr_GetRenderDesc
+         64   3F 0004A310 ovr_GetRenderDesc2
+         65   40 0004CB00 ovr_GetSessionPhysicalDeviceVk
+         66   41 00048FE0 ovr_GetSessionStatus
+         67   42 0004ACA0 ovr_GetString
+         68   43 0004C8B0 ovr_GetTextureSwapChainBufferDX
+         69   44 0004B2C0 ovr_GetTextureSwapChainBufferGL
+         70   45 0004CDD0 ovr_GetTextureSwapChainBufferVk
+         71   46 0004B590 ovr_GetTextureSwapChainCurrentIndex
+         72   47 0004B680 ovr_GetTextureSwapChainDesc
+         73   48 0004B4A0 ovr_GetTextureSwapChainLength
+         74   49 0002F500 ovr_GetTimeInSeconds
+         75   4A 0004B9F0 ovr_GetTouchHapticsDesc
+         76   4B 00048C70 ovr_GetTrackerCount
+         77   4C 00048D40 ovr_GetTrackerDesc
+         78   4D 00049820 ovr_GetTrackerPose
+         79   4E 0004ED20 ovr_GetTrackingCaps
+         80   4F 00049350 ovr_GetTrackingOriginType
+         81   50 000496A0 ovr_GetTrackingState
+         82   51 0004D0A0 ovr_GetTrackingStateWithSensorData
+         83   52 000489E0 ovr_GetVersionString
+         84   53 00049BF0 ovr_GetViewportStencil
+         85   54 0004D4C0 ovr_HideDesktopWindow
+         86   55 0004AF40 ovr_IdentifyClient
+         87   56 0004D320 ovr_InitDesktopWindow
+         88   57 00048930 ovr_Initialize
+         89   58 000490C0 ovr_IsExtensionSupported
+         90   59 00065960 ovr_Lookup
+         91   5A 00066F30 ovr_ReadWavFromBuffer
+         92   5B 00049420 ovr_RecenterTrackingOrigin
+         93   5C 00067500 ovr_ReleaseAudioChannelData
+         94   5D 00067500 ovr_ReleaseHapticsClip
+         95   5E 0004E250 ovr_ReportClientInfo
+         96   5F 0004E260 ovr_ReportCompilerInfo
+         97   60 0004C410 ovr_RequestBoundaryVisible
+         98   61 0004C080 ovr_ResetBoundaryLookAndFeel
+         99   62 0004C5D0 ovr_ResetPerfStats
+        100   63 0004A610 ovr_SetBool
+        101   64 0004BFA0 ovr_SetBoundaryLookAndFeel
+        102   65 0004BAF0 ovr_SetControllerVibration
+        103   66 0004ED10 ovr_SetEnabledCaps
+        104   67 0004C790 ovr_SetExternalCameraProperties
+        105   68 0004A9D0 ovr_SetFloat
+        106   69 0004ABB0 ovr_SetFloatArray
+        107   6A 0004A7F0 ovr_SetInt
+        108   6B 0004AD90 ovr_SetString
+        109   6C 0004CBF0 ovr_SetSynchonizationQueueVk
+        110   6D 0004CC00 ovr_SetSynchronizationQueueVk
+        111   6E 00049280 ovr_SetTrackingOriginType
+        112   6F 0004D3F0 ovr_ShowDesktopWindow
+        113   70 00048940 ovr_Shutdown
+        114   71 000494F0 ovr_SpecifyTrackingOrigin
+        115   72 0004BBE0 ovr_SubmitControllerVibration
+        116   73 00049FA0 ovr_SubmitFrame
+        117   74 0004A100 ovr_SubmitFrame2
+        118   75 0004BDC0 ovr_TestBoundary
+        119   76 0004BEB0 ovr_TestBoundaryPoint
+        120   77 0004AE80 ovr_TraceMessage
+        121   78 00049CF0 ovr_WaitToBeginFrame
+
+  Summary
+
+        1000 .00cfg
+       5C000 .data
+        1000 .gfids
+       12000 .pdata
+       9F000 .rdata
+        3000 .reloc
+       24000 .rsrc
+      19F000 .text
+        1000 .tls
