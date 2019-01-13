@@ -15,20 +15,20 @@ namespace NoculusRT.Native64
 		/// </summary>
 		public ovrHmdType Type;
 
-		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-		public byte[] Pad0;
+		/// <summary>
+		/// Reserved padding.
+		/// </summary>
+		public int Pad0;
 
 		/// <summary>
 		/// UTF8-encoded product identification string (e.g. "Oculus Rift DK1").
 		/// </summary>
-		[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 64)] // TODO: Unicode here vs the ansi we set for the pinvokes?
-		public string ProductName;
+		public NativeBlob64 ProductName;
 
 		/// <summary>
 		/// UTF8-encoded HMD manufacturer identification string.
 		/// </summary>
-		[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 64)]
-		public string Manufacturer;
+		public NativeBlob64 Manufacturer;
 
 		/// <summary>
 		/// HID (USB) vendor identifier of the device.
@@ -43,8 +43,7 @@ namespace NoculusRT.Native64
 		/// <summary>
 		/// HMD serial number.
 		/// </summary>
-		[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 24)]
-		public string SerialNumber;
+		public NativeBlob24 SerialNumber;
 
 		/// <summary>
 		/// HMD firmware major version.
@@ -77,16 +76,24 @@ namespace NoculusRT.Native64
 		public uint DefaultTrackingCaps;
 
 		/// <summary>
-		/// Defines the recommended FOVs for the HMD.
+		/// Defines the recommended FOVs for the HMD for eye 0.
 		/// </summary>
-		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-		public ovrFovPort[] DefaultEyeFov;
-		
+		public ovrFovPort DefaultEyeFov0;
+
 		/// <summary>
-		/// Defines the maximum FOVs for the HMD.
+		/// Defines the recommended FOVs for the HMD for eye 1.
 		/// </summary>
-		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-		public ovrFovPort[] MaxEyeFov;
+		public ovrFovPort DefaultEyeFov1;
+
+		/// <summary>
+		/// Defines the maximum FOVs for the HMD for eye 0.
+		/// </summary>
+		public ovrFovPort MaxEyeFov0;
+
+		/// <summary>
+		/// Defines the maximum FOVs for the HMD for eye 0.
+		/// </summary>
+		public ovrFovPort MaxEyeFov1;
 
 		/// <summary>
 		/// Resolution of the full HMD screen (both eyes) in pixels.
@@ -98,8 +105,10 @@ namespace NoculusRT.Native64
 		/// </summary>
 		public float DisplayRefreshRate;
 
-		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-		public byte[] Pad1;
+		/// <summary>
+		/// Reserved padding.
+		/// </summary>
+		public int Pad1;
 	}
 
 	public enum ovrHmdType : int

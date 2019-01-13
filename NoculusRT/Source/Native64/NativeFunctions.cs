@@ -76,4 +76,14 @@ namespace NoculusRT.Native64
 
 		#endregion Methods
 	}
+
+	[StructLayout(LayoutKind.Sequential, Size = 24)]
+	public struct NativeBlob24
+	{
+	}
+
+	[StructLayout(LayoutKind.Sequential, Size = 64)]
+	public struct NativeBlob64
+	{
+	}
 }
