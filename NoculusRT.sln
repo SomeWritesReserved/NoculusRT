@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoculusRT", "NoculusRT.csproj", "{05089C6D-4182-454B-821D-55349A0A9679}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoculusRT", "NoculusRT\NoculusRT.csproj", "{05089C6D-4182-454B-821D-55349A0A9679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{33E059B9-A4F8-46E2-AD47-60988298A13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{05089C6D-4182-454B-821D-55349A0A9679}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05089C6D-4182-454B-821D-55349A0A9679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05089C6D-4182-454B-821D-55349A0A9679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E059B9-A4F8-46E2-AD47-60988298A13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E059B9-A4F8-46E2-AD47-60988298A13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E059B9-A4F8-46E2-AD47-60988298A13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E059B9-A4F8-46E2-AD47-60988298A13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
