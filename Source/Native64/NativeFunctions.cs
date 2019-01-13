@@ -11,7 +11,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// Houses all the P/Invoke calls into the Oculus VR Runtime dll.
 	/// </summary>
-	internal static class NativeFunctions
+	public static class NativeFunctions
 	{
 		#region Methods
 
@@ -44,18 +44,32 @@ namespace NoculusRT.Native64
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetLastErrorInfo", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern void ovr_GetLastErrorInfo(ref ovrErrorInfo ovrErrorInfo);
 
+		/// <summary>
+		/// Creates a handle to a VR session. Upon success the returned ovrSession must be eventually freed with ovr_Destroy when it is no longer needed. A second call to
+		/// ovr_Create will result in an error return value if the previous session has not been destroyed.
+		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_Create", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern ovrResult ovr_Create(ref IntPtr opaqueSessionPointer, ref ovrGraphicsLuid ovrGraphicsLuid);
 
+		/// <summary>
+		/// Destroys the session.
+		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_Destroy", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern void ovr_Destroy(IntPtr opaqueSessionPointer);
 
+		/// <summary>
+		/// Specifies status information for the current session.
+		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetSessionStatus", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern ovrResult ovr_GetSessionStatus(IntPtr opaqueSessionPointer, ref ovrSessionStatus ovrSessionStatus);
 
+		/// <summary>
+		/// Returns information about the current HMD. ovr_Initialize must be called prior to calling this function, otherwise ovrHmdDesc::Type will be set to ovrHmd_None without
+		/// checking for the HMD presence.
+		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetHmdDesc", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern ovrHmdDesc ovr_GetHmdDesc(IntPtr opaqueSessionPointer);
