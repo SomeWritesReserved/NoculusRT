@@ -1,0 +1,2 @@
+# Nothing is a text file that should undergo CRLF-to-LF normalization
+* -text
