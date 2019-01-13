@@ -47,6 +47,7 @@
     <Compile Include="Source\Native64\ovrResult.cs" />
     <Compile Include="Source\Native64\ovrSessionStatus.cs" />
     <Compile Include="Source\Native64\ovrSizei.cs" />
+    <Compile Include="Source\Native64\ovrTrackingOrigin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

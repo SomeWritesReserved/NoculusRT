@@ -76,22 +76,22 @@ namespace NoculusRT.Native64
 		public uint DefaultTrackingCaps;
 
 		/// <summary>
-		/// Defines the recommended FOVs for the HMD for eye 0.
+		/// Defines the recommended FOVs for the HMD for eye 0 (left eye).
 		/// </summary>
 		public ovrFovPort DefaultEyeFov0;
 
 		/// <summary>
-		/// Defines the recommended FOVs for the HMD for eye 1.
+		/// Defines the recommended FOVs for the HMD for eye 1 (right eye).
 		/// </summary>
 		public ovrFovPort DefaultEyeFov1;
 
 		/// <summary>
-		/// Defines the maximum FOVs for the HMD for eye 0.
+		/// Defines the maximum FOVs for the HMD for eye 0 (left eye).
 		/// </summary>
 		public ovrFovPort MaxEyeFov0;
 
 		/// <summary>
-		/// Defines the maximum FOVs for the HMD for eye 0.
+		/// Defines the maximum FOVs for the HMD for eye 1 (right eye).
 		/// </summary>
 		public ovrFovPort MaxEyeFov1;
 

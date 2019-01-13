@@ -67,12 +67,28 @@ namespace NoculusRT.Native64
 		public static extern ovrResult ovr_GetSessionStatus(IntPtr opaqueSessionPointer, ref ovrSessionStatus ovrSessionStatus);
 
 		/// <summary>
+		/// Sets the tracking origin type. When the tracking origin is changed, all of the calls that either provide or accept ovrPosef will use the new tracking origin provided.
+		/// </summary>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_SetTrackingOriginType", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern ovrResult ovr_SetTrackingOriginType(IntPtr opaqueSessionPointer, ovrTrackingOrigin ovrTrackingOrigin);
+
+		/// <summary>
 		/// Returns information about the current HMD. ovr_Initialize must be called prior to calling this function, otherwise ovrHmdDesc::Type will be set to ovrHmd_None without
 		/// checking for the HMD presence.
 		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetHmdDesc", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern ovrHmdDesc ovr_GetHmdDesc(IntPtr opaqueSessionPointer);
+
+		/// <summary>
+		/// Calculates the recommended viewport size for rendering a given eye within the HMD with a given FOV cone.
+		/// Higher FOV will generally require larger textures to maintain quality. Apps packing multiple eye views together on the same texture should ensure there are
+		/// at least 8 pixels of padding between them to prevent texture filtering and chromatic aberration causing images to leak between the two eye views.
+		/// </summary>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetFovTextureSize", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern ovrSizei ovr_GetFovTextureSize(IntPtr opaqueSessionPointer, int eye, ovrFovPort fov, float pixelsPerDisplayPixel);
 
 		#endregion Methods
 	}
