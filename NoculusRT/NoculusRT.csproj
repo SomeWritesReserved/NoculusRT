@@ -39,15 +39,22 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Native64\ovrErrorInfo.cs" />
+    <Compile Include="Source\Native64\ovrEyeRenderDesc.cs" />
+    <Compile Include="Source\Native64\ovrEyeType.cs" />
     <Compile Include="Source\Native64\ovrFovPort.cs" />
     <Compile Include="Source\Native64\ovrHmdDesc.cs" />
     <Compile Include="Source\Native64\ovrInitParams.cs" />
     <Compile Include="Source\Native64\NativeFunctions.cs" />
     <Compile Include="Source\Native64\ovrGraphicsLuid.cs" />
+    <Compile Include="Source\Native64\ovrPosef.cs" />
+    <Compile Include="Source\Native64\ovrQuatf.cs" />
+    <Compile Include="Source\Native64\ovrRecti.cs" />
     <Compile Include="Source\Native64\ovrResult.cs" />
     <Compile Include="Source\Native64\ovrSessionStatus.cs" />
     <Compile Include="Source\Native64\ovrSizei.cs" />
     <Compile Include="Source\Native64\ovrTrackingOrigin.cs" />
+    <Compile Include="Source\Native64\ovrVector3f.cs" />
+    <Compile Include="Source\Native64\ovrVector2f.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

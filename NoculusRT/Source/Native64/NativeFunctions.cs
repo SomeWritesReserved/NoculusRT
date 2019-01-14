@@ -88,7 +88,24 @@ namespace NoculusRT.Native64
 		/// </summary>
 		[SuppressUnmanagedCodeSecurity]
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetFovTextureSize", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
-		public static extern ovrSizei ovr_GetFovTextureSize(IntPtr opaqueSessionPointer, int eye, ovrFovPort fov, float pixelsPerDisplayPixel);
+		public static extern ovrSizei ovr_GetFovTextureSize(IntPtr opaqueSessionPointer, ovrEyeType eye, ovrFovPort fov, float pixelsPerDisplayPixel);
+
+		/// <summary>
+		/// Computes the distortion viewport, view adjust, and other rendering parameters for the specified eye.
+		/// </summary>
+		/// <remarks>https://forums.oculus.com/developer/discussion/comment/562711#Comment_562711 call ovr_GetRenderDesc2.</remarks>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetRenderDesc2", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern ovrEyeRenderDesc ovr_GetRenderDesc(IntPtr opaqueSessionPointer, ovrEyeType eye, ovrFovPort fov);
+
+		/// <summary>
+		/// Returns the predicted head pose in outHmdTrackingState and offset eye poses in outEyePoses. This is a thread-safe function where caller should increment frameIndex
+		/// with every frame and pass that index where applicable to functions called on the rendering thread. Assuming outEyePoses are used for rendering, it should be passed
+		/// as a part of ovrLayerEyeFov. The caller does not need to worry about applying HmdToEyePose to the returned outEyePoses variables.
+		/// </summary>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetEyePoses", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern void ovr_GetEyePoses(IntPtr opaqueSessionPointer, long frameIndex, [MarshalAs(UnmanagedType.U1)] bool latencyMarker, [MarshalAs(UnmanagedType.LPArray, SizeConst = 2)] ovrPosef[] hmdToEyePose, [In, Out, MarshalAs(UnmanagedType.LPArray, SizeConst = 2)] ovrPosef[] outEyePoses, ref double outSensorSampleTime);
 
 		#endregion Methods
 	}
