@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// A quaternion rotation.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrQuatf
 	{
 		public float X;

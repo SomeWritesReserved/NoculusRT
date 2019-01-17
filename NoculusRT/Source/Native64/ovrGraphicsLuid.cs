@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// Identifies a graphics device in a platform-specific way. For Windows this is a LUID type.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 8)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrGraphicsLuid
 	{
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]

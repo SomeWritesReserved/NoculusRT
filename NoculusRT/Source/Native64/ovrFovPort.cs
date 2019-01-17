@@ -11,7 +11,7 @@ namespace NoculusRT.Native64
 	/// Describes the up, down, left, and right angles of the field of view. Field Of View (FOV) tangent of the angle units.
 	/// For a standard 90 degree vertical FOV, we would have: { UpTan = tan(90 degrees / 2), DownTan = tan(90 degrees / 2) }.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrFovPort
 	{
 		/// <summary>

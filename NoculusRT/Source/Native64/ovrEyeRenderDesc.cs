@@ -11,7 +11,7 @@ namespace NoculusRT.Native64
 	/// Rendering information for each eye. Computed by ovr_GetRenderDesc() based on the specified FOV. Note that the rendering viewport is not included
 	/// here as it can be specified separately and modified per frame by passing different Viewport values in the layer structure.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrEyeRenderDesc
 	{
 		/// <summary>

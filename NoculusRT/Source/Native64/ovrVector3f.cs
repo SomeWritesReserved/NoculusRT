@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// A 3D vector with float components.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack =4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrVector3f
 	{
 		public float X;

@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// Parameters for ovr_Initialize.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 8)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrInitParams
 	{
 		/// <summary>

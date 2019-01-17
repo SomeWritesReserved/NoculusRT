@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// A 2D size with integer components.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrSizei
 	{
 		public int Width;

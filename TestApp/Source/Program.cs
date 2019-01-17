@@ -57,6 +57,8 @@ namespace TestApp
 
 			NativeFunctions.ovr_Destroy(sessionPointer);
 			NativeFunctions.ovr_Shutdown();
+			Console.WriteLine("Done");
+			Console.ReadKey(true);
 		}
 
 		#endregion Methods

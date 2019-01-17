@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// Position and orientation together. The coordinate system used is right-handed Cartesian.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential, Pack = 4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrPosef
 	{
 		public ovrQuatf Orientation;

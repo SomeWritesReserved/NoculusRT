@@ -10,7 +10,7 @@ namespace NoculusRT.Native64
 	/// <summary>
 	/// A 2D rectangle with a position and size. All components are integers.
 	/// </summary>
-	[StructLayout(LayoutKind.Sequential,Pack =4)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrRecti
 	{
 		public int PositionX;

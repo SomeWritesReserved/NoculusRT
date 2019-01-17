@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NoculusRT.Native64
 {
-	[StructLayout(LayoutKind.Sequential, Pack = 8)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct ovrHmdDesc
 	{
 		/// <summary>
