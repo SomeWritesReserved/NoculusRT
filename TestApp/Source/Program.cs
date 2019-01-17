@@ -46,10 +46,13 @@ namespace TestApp
 				double sensorSampleTime = 0;
 				NativeFunctions.ovr_GetEyePoses(sessionPointer, frameIndex, true, hmdToEyePose, outEyePoses, ref sensorSampleTime);
 
+				ovrMatrix4f projectionLeft = NativeFunctions.ovrMatrix4f_Projection(eyeRenderDescLeft.Fov, 0.2f, 1000.0f, ovrProjectionModifier.ovrProjection_None);
+				ovrTimewarpProjectionDesc timewarpProjectionDesc = NativeFunctions.ovrTimewarpProjectionDesc_FromProjection(projectionLeft, ovrProjectionModifier.ovrProjection_None);
+
 				Console.WriteLine($"{outEyePoses[0].Position.X} {outEyePoses[0].Position.Y} {outEyePoses[0].Position.Z}");
 				//Console.WriteLine($"{outEyePoses[0].Orientation.X} {outEyePoses[0].Orientation.Y} {outEyePoses[0].Orientation.Z} {outEyePoses[0].Orientation.W}");
 
-				if (Console.KeyAvailable) { break; }
+				if (Console.KeyAvailable) { Console.ReadKey(true); break; }
 
 				frameIndex++;
 				Thread.Sleep(11);

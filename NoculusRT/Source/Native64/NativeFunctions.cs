@@ -107,6 +107,20 @@ namespace NoculusRT.Native64
 		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovr_GetEyePoses", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
 		public static extern void ovr_GetEyePoses(IntPtr opaqueSessionPointer, long frameIndex, [MarshalAs(UnmanagedType.U1)] bool latencyMarker, [MarshalAs(UnmanagedType.LPArray, SizeConst = 2)] ovrPosef[] hmdToEyePose, [In, Out, MarshalAs(UnmanagedType.LPArray, SizeConst = 2)] ovrPosef[] outEyePoses, ref double outSensorSampleTime);
 
+		/// <summary>
+		/// Used to generate projection from ovrEyeDesc::Fov.
+		/// </summary>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovrMatrix4f_Projection", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern ovrMatrix4f ovrMatrix4f_Projection(ovrFovPort fov, float znear, float zfar, ovrProjectionModifier projectionModFlags);
+
+		/// <summary>
+		/// Extracts the required data from the result of ovrMatrix4f_Projection.
+		/// </summary>
+		[SuppressUnmanagedCodeSecurity]
+		[DllImport("LibOVRRT64_1.dll", EntryPoint = "ovrTimewarpProjectionDesc_FromProjection", ExactSpelling = true, CallingConvention = CallingConvention.Cdecl, SetLastError = false, CharSet = CharSet.Ansi)]
+		public static extern ovrTimewarpProjectionDesc ovrTimewarpProjectionDesc_FromProjection(ovrMatrix4f projection, ovrProjectionModifier projectionModFlags);
+
 		#endregion Methods
 	}
 
