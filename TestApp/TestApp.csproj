@@ -51,6 +51,10 @@
       <Project>{05089c6d-4182-454b-821d-55349a0a9679}</Project>
       <Name>NoculusRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OvrCLI\OvrCLI.vcxproj">
+      <Project>{7692e97a-a50c-42b9-acd8-a0699bef852f}</Project>
+      <Name>OvrCLI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

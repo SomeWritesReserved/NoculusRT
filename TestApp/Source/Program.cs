@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using NoculusRT;
 using NoculusRT.Native64;
+using OvrCLI;
 
 namespace TestApp
 {
@@ -15,7 +16,9 @@ namespace TestApp
 
 		public static void Main(string[] args)
 		{
-			ovrInitParams initParams = new ovrInitParams();
+			OculusSession session = OculusSession.Create(13579);
+
+			/*ovrInitParams initParams = new ovrInitParams();
 			initParams.Flags = ovrInitFlags.ovrInit_RequestVersion | ovrInitFlags.ovrInit_Invisible;
 			initParams.RequestedMinorVersion = 26;
 
@@ -61,7 +64,7 @@ namespace TestApp
 			NativeFunctions.ovr_Destroy(sessionPointer);
 			NativeFunctions.ovr_Shutdown();
 			Console.WriteLine("Done");
-			Console.ReadKey(true);
+			Console.ReadKey(true);*/
 		}
 
 		#endregion Methods

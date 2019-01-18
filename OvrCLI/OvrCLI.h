@@ -1,21 +1,11 @@
-using namespace System;
+#pragma once
+
+#define DECL_STRUCT(name) struct name##_Native
+#include "StructsCore.h"
 
 namespace OvrCLI
 {
-	public ref class OvrException : Exception
-	{
-	public:
-		OvrException(int resultCode)
-		{
-			this->ResultCode = resultCode;
-		}
-
-		property int ResultCode;
-	};
+#define DECL_STRUCT(name) public value struct name
+#define IS_CLI
+#include "StructsCore.h"
 }
-
-#define ovrCall(func) { ovrResult result = func; if (!OVR_SUCCESS(result)) { throw gcnew OvrCLI::OvrException(result); } }
-
-#define ovrMallocStruct(ovrTypeName) (ovrTypeName*)memset(_aligned_malloc(sizeof(ovrTypeName), __alignof(ovrTypeName)), 0, sizeof(ovrTypeName))
-
-#define ovrFreeStruct(var) _aligned_free(var)

@@ -137,12 +137,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="OvrCLI.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="StructsCore.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="OculusSession.cpp" />
-    <ClCompile Include="OvrCLI.h" />
+    <ClCompile Include="OvrWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
