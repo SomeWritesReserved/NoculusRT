@@ -14,3 +14,6 @@ namespace OvrCLI
 
 ovrResult ovrw_Start(ovrInitFlags initFlags, ovrSession* session);
 void ovrw_Stop(ovrSession session);
+
+
+ovrResult ovrw_GetSessionStatus(ovrSession session, ovrwSessionStatus* sessionStatus);

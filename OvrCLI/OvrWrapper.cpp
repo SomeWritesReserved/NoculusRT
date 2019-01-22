@@ -21,3 +21,9 @@ void ovrw_Stop(ovrSession session)
 	ovr_Destroy(session);
 	ovr_Shutdown();
 }
+
+ovrResult ovrw_GetSessionStatus(ovrSession session, ovrwSessionStatus* sessionStatus)
+{
+	ovrSessionStatus ovrSessionStatus;
+	ovrResult result = ovr_GetSessionStatus(session, &ovrSessionStatus);
+}
