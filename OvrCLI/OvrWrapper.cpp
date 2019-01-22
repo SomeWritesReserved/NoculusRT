@@ -1,15 +1,16 @@
 #include "OVR_CAPI_D3D.h"
 #include "OvrCLI.h"
 
-void start()
+ovrResult ovrw_start(ovrInitFlags initFlags)
 {
-	ovrInitParams initParams = { ovrInit_RequestVersion | ovrInit_Invisible, OVR_MINOR_VERSION, nullptr, 0, 0 };
+	ovrInitParams initParams = { initFlags, OVR_MINOR_VERSION, nullptr, 0, 0 };
 	ovrResult result = ovr_Initialize(&initParams);
-	if (OVR_FAILURE(result)) { return; }
+	if (OVR_FAILURE(result)) { return result; }
 
 	ovrSession session;
 	ovrGraphicsLuid graphicsLuid;
 	result = ovr_Create(&session, &graphicsLuid);
-	if (OVR_FAILURE(result)) { ovr_Shutdown(); return; }
+	if (OVR_FAILURE(result)) { ovr_Shutdown(); }
 
+	return result;
 }

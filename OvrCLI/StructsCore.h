@@ -10,14 +10,14 @@ public:
 	int c;
 
 #ifdef IS_CLI
-	void CopyTo(HmdDescription_Native &other)
+	const void CopyTo(HmdDescription_Native &other)
 	{
 		other.a = this->a;
 		other.b = this->b;
 		other.c = this->c;
 	}
 
-	void CopyFrom(HmdDescription_Native &other)
+	void CopyFrom(const HmdDescription_Native &other)
 	{
 		this->a = other.a;
 		this->b = other.b;

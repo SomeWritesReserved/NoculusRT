@@ -16,8 +16,6 @@ namespace TestApp
 
 		public static void Main(string[] args)
 		{
-			OculusSession session = OculusSession.Create(13579);
-
 			/*ovrInitParams initParams = new ovrInitParams();
 			initParams.Flags = ovrInitFlags.ovrInit_RequestVersion | ovrInitFlags.ovrInit_Invisible;
 			initParams.RequestedMinorVersion = 26;
