@@ -137,7 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="OvrCLI.h" />
+    <ClInclude Include="OvrWrapper.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StructsCore.h" />
   </ItemGroup>

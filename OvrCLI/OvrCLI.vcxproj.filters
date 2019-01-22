@@ -21,7 +21,7 @@
     <ClInclude Include="StructsCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OvrCLI.h">
+    <ClInclude Include="OvrWrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

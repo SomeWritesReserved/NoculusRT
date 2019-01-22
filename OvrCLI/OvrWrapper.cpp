@@ -1,16 +1,23 @@
-#include "OVR_CAPI_D3D.h"
-#include "OvrCLI.h"
+#include "OvrWrapper.h"
 
-ovrResult ovrw_start(ovrInitFlags initFlags)
+ovrResult ovrw_Start(ovrInitFlags initFlags, ovrSession* session)
 {
-	ovrInitParams initParams = { initFlags, OVR_MINOR_VERSION, nullptr, 0, 0 };
+	ovrInitParams initParams = { };
+	initParams.Flags = (initFlags | ovrInitFlags::ovrInit_RequestVersion);
+	initParams.RequestedMinorVersion = OVR_MINOR_VERSION;
+	initParams.LogCallback = nullptr;
 	ovrResult result = ovr_Initialize(&initParams);
 	if (OVR_FAILURE(result)) { return result; }
 
-	ovrSession session;
 	ovrGraphicsLuid graphicsLuid;
-	result = ovr_Create(&session, &graphicsLuid);
+	result = ovr_Create(session, &graphicsLuid);
 	if (OVR_FAILURE(result)) { ovr_Shutdown(); }
 
 	return result;
+}
+
+void ovrw_Stop(ovrSession session)
+{
+	ovr_Destroy(session);
+	ovr_Shutdown();
 }
